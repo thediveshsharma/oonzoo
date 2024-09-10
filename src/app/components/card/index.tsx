@@ -34,7 +34,9 @@ const CardComponent: React.FC<CardProps> = ({ title, productData }) => {
                 <div className="flex justify-end">
                   <a
                     className="absolute z-10 bg-black px-4 flex gap-2 bg-green-500"
-                    href={`https:wa.me/7977336128?${`/product/${product.id}`}`}
+                    href={`https://wa.me/?text=${encodeURIComponent(
+                      `${product.title}: https://oonzooapp.netlify.app/product/${product.id}`
+                    )}`}
                   >
                     {" "}
                     Share on
